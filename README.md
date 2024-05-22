@@ -1,16 +1,14 @@
-![image](https://github.com/4kbento/4kbento/assets/162337368/759061e9-2312-42f3-8ab7-68a71dec92aa)
-
-
+![image](https://github.com/4kbento/4kbento/assets/162337368/4db0ecd4-57b8-475d-950a-de2addf5b91e)
 
 ## Hi there 👋
 
 Meu nome é Bento, tenho 17 anos e estou cursando Ciência da Computação. Aficionado por tecnologia, busquei a melhor área da computação. Sempre buscando adquirir mais conhecimentos, quero cada vez mais aprimorar minhas habilidades e botar elas em prática.
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=4kbento&layout=compact&langs_count=7&theme=dark"/>
+<p align="center"><img height="100em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=4kbento&layout=compact&langs_count=7&theme=dark"/>
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,java" />
+    <img src="https://skillicons.dev/icons?i=java,mysql,git" />
   </a>
 </p>
 
