@@ -5,8 +5,6 @@
 - Computer science 
 - Studying Java and MySQL
 - 17y
-  
-<p align="left"><img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=4kbento&layout=compact&langs_count=7&theme=dark"/>
 
 <p align="left">
   <a href="https://skillicons.dev">
