@@ -1,5 +1,3 @@
-![image](https://github.com/4kbento/4kbento/assets/162337368/4db0ecd4-57b8-475d-950a-de2addf5b91e)
-
 ## Hi there 👋
 
 - Computer science 
