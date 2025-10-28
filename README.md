@@ -2,7 +2,6 @@
 
 - Computer science 
 - Studying Java and MySQL
-- 17y
 
 <p align="left">
   <a href="https://skillicons.dev">
