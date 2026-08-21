@@ -1,4 +1,4 @@
-## Hi there 👋
+## Olá 👋
 
 - Computer science 
 - Studying Java and MySQL
