@@ -15,9 +15,6 @@
 <a href="https://www.linkedin.com/in/bento-biral-foerster-9b28a4292/">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
-<a href="(https://x.com/4kbento)">
-  <img src="https://img.shields.io/badge/X-0077B5?style=for-the-badge&logo=X&logoColor=white" />
-</a>
 
 <p align="left">
   <img alt="Gmail" height="15" width="18" src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/gmail.png"> bentofoerster@gmail.com
