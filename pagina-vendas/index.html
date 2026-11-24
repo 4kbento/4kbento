@@ -6,248 +6,265 @@
 <title>+500 Juegos Cooperativos de Matemáticas</title>
 <meta name="description" content="Más de 500 juegos cooperativos de matemáticas listos para aplicar en clase, de 1.º de primaria a secundaria. Toda la clase participa y gana junta.">
 <style>
-  /* Layout: coluna única de celular (máx. 480px); paleta tirada das fichas do produto (turquesa, amarelo, lilás, verde). */
+  /* Layout: coluna única de celular (máx. 480px). Paleta tirada das fichas do produto: turquesa, azul-marinho, amarelo, lilás e verde. */
   :root{
     --navy:#173a5e; --muted:#4f6478; --bg:#ffffff;
-    --teal:#18a5a7; --teal-dark:#0f7f86; --teal-soft:#eaf8f8; --teal-line:#c3e9ea;
+    --teal:#18a5a7; --teal-dark:#0f7f86; --teal-soft:#eaf8f8; --teal-line:#bfe6e8;
     --yellow:#ffd23f; --yellow-dark:#e0ae00; --yellow-soft:#fff6d1;
     --purple:#8f6fe0; --purple-soft:#f1ebff;
-    --green:#5fb836; --green-soft:#eef8e6;
-    --radius:20px;
+    --green:#4caf50; --green-dark:#2f8f3a; --green-soft:#eaf7e6;
+    --radius:18px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;background:#fff;color-scheme:light}
-  body{max-width:480px;margin:0 auto;overflow-x:hidden;background:var(--bg);color:var(--navy);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:Arial,Helvetica,sans-serif;font-weight:800;line-height:1.12;margin:0 0 .5em;text-wrap:balance}
-  h1{font-size:34px;letter-spacing:-.5px}
-  h2{font-size:28px;text-align:center}
-  h3{font-size:20px}
-  p{margin:0 0 1em}
-  .wrap{padding:0 16px}
-  section{padding:56px 0}
-  .lead{font-size:18px;color:var(--muted)}
-  .center{text-align:center}
-  .kicker{display:inline-block;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--teal);padding:7px 16px;border-radius:99px;margin-bottom:14px}
-  .hl{background:linear-gradient(transparent 58%,var(--yellow) 58%);padding:0 4px}
+  body{max-width:480px;margin:0 auto;overflow-x:hidden;background:var(--bg);color:var(--navy);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Arial,Helvetica,sans-serif;font-weight:800;line-height:1.15;margin:0;text-wrap:balance}
+  p{margin:0}
+  section{padding:52px 16px;border-top:1px solid var(--teal-line)}
+  .eyebrow{display:block;text-align:center;font-weight:800;font-size:12.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal-dark);margin-bottom:10px}
+  .title{font-size:27px;text-align:center}
+  .sub{font-size:16px;color:var(--muted);text-align:center;margin-top:10px}
+  .stack{display:grid;gap:14px;margin-top:26px}
 
-  /* botões: amarelo com texto azul, como o selo "¡Todos ganan!" das fichas */
-  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--yellow);color:var(--navy);text-decoration:none;font-weight:800;font-size:18px;padding:17px 20px;border-radius:16px;box-shadow:0 6px 0 var(--yellow-dark);transition:transform .12s,box-shadow .12s;text-align:center}
-  .btn:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--yellow-dark)}
-  .btn:active{transform:translateY(6px);box-shadow:0 0 0 var(--yellow-dark)}
+  /* botão: amarelo com texto azul, no estilo do selo "¡Todos ganan!" das fichas */
+  .btn{display:flex;align-items:center;justify-content:center;width:100%;background:var(--yellow);color:var(--navy);text-decoration:none;font-weight:800;font-size:19px;padding:20px;border-radius:16px;box-shadow:0 6px 0 var(--navy);transition:transform .12s,box-shadow .12s;text-align:center}
+  .btn:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--navy)}
+  .btn:active{transform:translateY(6px);box-shadow:0 0 0 var(--navy)}
   .btn:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
-  .trust{font-size:14px;color:var(--muted);margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center}
-  .trust span::before{content:"✓ ";color:var(--teal);font-weight:800}
+  .micro{text-align:center;font-size:13px;color:var(--muted);margin-top:14px}
 
-  .topbar{background:var(--teal-dark);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:10px 16px}
+  /* faixa do topo */
+  .topbar{background:var(--teal-dark);color:#fff;text-align:center;font-size:13.5px;font-weight:700;padding:11px 16px}
   .topbar b{color:var(--yellow)}
 
   /* hero */
-  .hero{padding:32px 0 48px;text-align:center}
-  .hero-ficha{margin:32px 0 0;position:relative}
-  .hero-ficha img{display:block;width:88%;max-width:100%;margin:0 auto;border-radius:14px;box-shadow:0 18px 40px rgba(23,58,94,.18);transform:rotate(-2deg);border:1px solid var(--teal-line)}
-  .hero-ficha figcaption{font-size:13px;color:var(--muted);margin-top:14px}
+  .hero{padding:30px 16px 44px;text-align:center}
+  .hero h1{font-size:33px;letter-spacing:-.3px;margin-top:2px}
+  .hero h1 .num{color:var(--teal)}
+  .hl{background:linear-gradient(transparent 56%,var(--yellow) 56%);padding:0 4px}
+  .hero .sub{font-size:17px;margin-top:14px}
+  .hero-img{margin:24px 0 26px}
+  .hero-img img{display:block;width:86%;max-width:100%;height:auto;margin:0 auto;border-radius:14px;border:1px solid var(--teal-line);box-shadow:0 18px 40px rgba(23,58,94,.18);transform:rotate(-2deg)}
 
-  /* o que recebe */
-  .levels{display:grid;gap:16px;margin-top:28px}
-  .level{border-radius:var(--radius);padding:22px 20px;border:2px solid}
-  .level .grade{display:inline-block;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:#fff;padding:5px 12px;border-radius:99px;margin-bottom:12px}
-  .level h3{margin-bottom:8px}
-  .level ul{margin:0;padding:0;list-style:none}
-  .level li{padding:5px 0 5px 26px;position:relative;font-weight:700;font-size:15px}
-  .level li::before{content:"";position:absolute;left:4px;top:11px;width:10px;height:10px;border-radius:50%}
-  .lv1{background:var(--green-soft);border-color:var(--green)} .lv1 .grade,.lv1 li::before{background:var(--green)}
-  .lv2{background:var(--teal-soft);border-color:var(--teal)} .lv2 .grade,.lv2 li::before{background:var(--teal)}
-  .lv3{background:var(--purple-soft);border-color:var(--purple)} .lv3 .grade,.lv3 li::before{background:var(--purple)}
-  .ficha-has{margin-top:20px;background:#fff;border:2px dashed var(--teal-line);border-radius:var(--radius);padding:18px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;font-weight:700;font-size:14px}
-  .ficha-has div::before{content:"✓ ";color:var(--teal)}
+  /* o que vai receber: cards em lista com ícone à esquerda */
+  .item{display:flex;gap:14px;align-items:stretch;background:var(--teal-soft);border:1.5px solid var(--teal-line);border-radius:var(--radius);padding:12px}
+  .item .ico{flex:0 0 66px;border-radius:12px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px 4px;line-height:1.05}
+  .item .ico b{font-size:17px}
+  .item .ico small{font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-top:4px}
+  .item .ico svg{width:28px;height:28px}
+  .item h3{font-size:17px;margin:4px 0 4px}
+  .item p{font-size:14.5px;color:var(--muted)}
+  .item > div:last-child{min-width:0;padding:2px 4px 2px 0}
+  .c-green{background:var(--green)} .c-teal{background:var(--teal)} .c-purple{background:var(--purple)} .c-navy{background:var(--navy)}
 
   /* por que funciona */
-  .why{display:grid;gap:14px;margin-top:28px}
-  .why div{background:var(--teal-soft);border-radius:var(--radius);padding:20px 20px 18px}
-  .why i{font-style:normal;font-size:30px;display:block;margin-bottom:6px}
-  .why h3{margin-bottom:6px}
-  .why p{margin:0;color:var(--muted)}
+  .why{background:var(--teal-soft);border:1.5px solid var(--teal-line);border-radius:var(--radius);padding:26px 22px;text-align:center}
+  .why .circle{width:62px;height:62px;border-radius:50%;background:var(--yellow);border:3px solid var(--navy);display:grid;place-items:center;margin:0 auto 14px}
+  .why .circle svg{width:30px;height:30px}
+  .why h3{font-size:19px;margin-bottom:8px}
+  .why p{color:var(--muted);font-size:15px}
 
   /* bônus */
-  .bonus-list{display:grid;gap:14px;margin-top:28px}
-  .bonus{background:#fff;border:2px solid var(--teal-line);border-radius:var(--radius);padding:20px}
-  .bonus .tag{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--navy);background:var(--yellow);padding:4px 12px;border-radius:99px}
-  .bonus h3{margin:10px 0 6px}
-  .bonus p{margin:0;color:var(--muted);font-size:15px}
+  .bonus{position:relative;border:2px dashed var(--teal);border-radius:var(--radius);padding:26px 14px 16px;display:flex;gap:14px;margin-top:10px}
+  .bonus .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--navy);border:2px solid var(--navy);font-weight:800;font-size:12px;letter-spacing:.6px;padding:3px 12px;border-radius:99px;white-space:nowrap}
+  .cover{flex:0 0 74px;height:100px;border-radius:8px;padding:8px 6px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 4px 0 rgba(23,58,94,.18);border:2px solid var(--navy)}
+  .cover small{font-size:8.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;opacity:.9}
+  .cover b{font-size:11px;line-height:1.15}
+  .cover i{font-style:normal;align-self:flex-end;width:22px;height:22px;border-radius:50%;background:var(--yellow);color:var(--navy);display:grid;place-items:center;font-size:12px;font-weight:800}
+  .bonus h3{font-size:16.5px;margin-bottom:5px}
+  .bonus p{font-size:14px;color:var(--muted)}
+  .bonus > div:last-child{min-width:0}
+  .free{display:inline-block;margin-top:10px;background:var(--green);color:#fff;font-weight:800;font-size:12px;letter-spacing:.5px;padding:5px 10px;border-radius:8px}
 
   /* oferta */
-  .offer-box{margin-top:26px;background:#fff;border-radius:24px;box-shadow:0 18px 50px rgba(23,58,94,.14);border:3px solid var(--teal);overflow:hidden}
-  .offer-box .head{background:var(--teal);color:#fff;text-align:center;padding:16px;font-size:20px;font-weight:800}
-  .offer-box ul{list-style:none;margin:0;padding:18px 20px 4px}
-  .offer-box li{padding:9px 0 9px 32px;position:relative;border-bottom:1px dashed var(--teal-line);font-weight:700;font-size:15px}
-  .offer-box li::before{content:"✓";position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:13px;display:grid;place-items:center}
-  .offer-box li.gift::before{content:"🎁";background:none;font-size:18px}
-  .price{text-align:center;padding:18px 20px 24px}
-  .price .val{font-size:56px;font-weight:800;line-height:1;color:var(--navy)}
-  .price .val small{font-size:24px;vertical-align:top;margin-right:4px}
-  .price .once{font-weight:800;color:var(--teal-dark);margin:6px 0 18px}
-  .price .fx{font-size:13px;color:var(--muted);margin:12px 0 0}
-  .guar{display:flex;gap:8px;align-items:flex-start;text-align:left;background:var(--green-soft);border-radius:12px;padding:12px 14px;margin-top:16px;font-size:14px}
-  .pay{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:12px}
-  .pay span{font-size:12px;font-weight:800;border:1px solid var(--teal-line);border-radius:6px;padding:4px 8px;color:var(--muted)}
+  .offer-box{margin-top:26px;border:3px solid var(--teal);border-radius:22px;overflow:hidden;box-shadow:0 18px 50px rgba(23,58,94,.14)}
+  .offer-box .head{background:var(--teal);color:#fff;text-align:center;padding:16px 14px;font-size:20px;font-weight:800;line-height:1.2}
+  .offer-box ul{list-style:none;margin:0;padding:16px 18px 6px}
+  .offer-box li{position:relative;padding:8px 0 8px 32px;font-weight:700;font-size:15px}
+  .offer-box li::before{content:"✓";position:absolute;left:0;top:7px;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:13px;display:grid;place-items:center}
+  .offer-box li em{font-style:normal;color:var(--green-dark)}
+  .price{text-align:center;padding:16px 18px 22px;border-top:1px solid var(--teal-line);margin:8px 18px 0}
+  .price .by{font-size:14px;color:var(--muted);font-weight:700}
+  .price .val{font-size:60px;font-weight:800;line-height:1;color:var(--teal-dark);margin:4px 0}
+  .price .val small{font-size:22px;vertical-align:top;margin-right:3px}
+  .price .once{font-weight:800;font-size:14px;color:var(--muted);margin-bottom:18px}
+  .guar{display:flex;gap:12px;align-items:center;text-align:left;background:var(--green-soft);border-radius:14px;padding:12px 14px;margin-top:16px;font-size:14px}
+  .guar .seal{flex:0 0 52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1}
+  .guar .seal b{font-size:20px} .guar .seal small{font-size:8.5px}
 
   /* depoimentos */
-  .testis{display:grid;gap:14px;margin-top:28px}
-  .t-slot{border:2px dashed var(--teal-line);background:var(--teal-soft);border-radius:var(--radius);min-height:140px;display:grid;place-items:center;color:var(--muted);font-weight:700;font-size:14px;text-align:center;padding:16px}
-  .testis img{width:100%;border-radius:var(--radius);border:1px solid var(--teal-line)}
+  .testi{background:var(--teal-soft);border:1.5px solid var(--teal-line);border-radius:var(--radius);padding:22px 20px;text-align:center}
+  .stars{color:var(--yellow-dark);font-size:20px;letter-spacing:2px}
+  .testi q{display:block;font-style:italic;color:var(--muted);margin:10px 0 14px;font-size:15px}
+  .who{display:flex;gap:10px;align-items:center;justify-content:center;text-align:left}
+  .who .av{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
+  .who b{display:block;font-size:14px} .who small{font-size:12.5px;color:var(--muted)}
+  .placeholder{outline:2px dashed var(--yellow-dark);outline-offset:-6px}
 
   /* faq */
-  .faq{margin-top:26px}
-  details{background:#fff;border:2px solid var(--teal-line);border-radius:16px;margin-bottom:10px;padding:0 18px}
+  details{border:1.5px solid var(--teal-line);border-radius:14px;padding:0 16px}
   details[open]{background:var(--teal-soft)}
-  summary{cursor:pointer;list-style:none;font-weight:800;padding:16px 28px 16px 0;position:relative}
+  summary{cursor:pointer;list-style:none;font-weight:800;padding:16px 30px 16px 0;position:relative}
   summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";position:absolute;right:0;top:10px;font-size:26px;color:var(--teal)}
+  summary::after{content:"+";position:absolute;right:0;top:9px;width:26px;height:26px;border-radius:50%;background:var(--yellow);color:var(--navy);display:grid;place-items:center;font-size:18px}
   details[open] summary::after{content:"–"}
-  details p{color:var(--muted);padding-bottom:6px}
+  details p{color:var(--muted);padding-bottom:16px;font-size:15px}
 
-  footer{background:#fff;color:var(--muted);border-top:1px solid var(--teal-line);font-size:13px;text-align:center;padding:28px 16px 96px}
-  footer p{margin:6px 0}
+  footer{border-top:1px solid var(--teal-line);color:var(--muted);font-size:12.5px;text-align:center;padding:26px 16px 100px}
+  footer p{margin:5px 0}
 
   /* CTA fixo no celular */
-  .sticky{position:fixed;left:0;right:0;bottom:0;max-width:480px;margin:0 auto;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--teal-line);z-index:20;transform:translateY(110%);transition:transform .25s}
+  .sticky{position:fixed;left:0;right:0;bottom:0;max-width:480px;margin:0 auto;padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--teal-line);z-index:20;transform:translateY(110%);transition:transform .25s}
   .sticky.show{transform:none}
-  .sticky .btn{padding:14px 18px;font-size:17px;box-shadow:0 4px 0 var(--yellow-dark)}
+  .sticky .btn{padding:15px;font-size:17px;box-shadow:0 4px 0 var(--navy)}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<div class="topbar">Material digital para docentes · <b>Precio de lanzamiento</b> · Acceso inmediato</div>
+<div class="topbar">Material digital para docentes · <b>Precio de lanzamiento</b></div>
 
 <!-- HERO -->
 <header class="hero">
-  <div class="wrap">
-    <span class="kicker">Para profes de primaria y secundaria</span>
-    <h1>+500 juegos cooperativos de matemáticas para que <span class="hl">toda tu clase participe</span></h1>
-    <p class="lead">Juegos listos para aplicar mañana, separados por grado y por tema. Tus alumnos calculan, razonan y resuelven en equipo, y nadie se queda mirando.</p>
-    <a class="btn js-checkout" href="#oferta">¡Quiero mis juegos! →</a>
-    <div class="trust"><span>Pago único</span><span>Acceso de por vida</span><span>Garantía de 7 días</span></div>
-    <figure class="hero-ficha">
-      <img src="ficha-fraccion-escondida.webp" width="1055" height="1491" alt="Ficha de ejemplo: La fracción escondida, juego matemático cooperativo con objetivo, roles del equipo, pistas, pasos y variaciones">
-      <figcaption>Así es una ficha por dentro: «La fracción escondida»</figcaption>
-    </figure>
-  </div>
+  <span class="eyebrow">Material para docentes</span>
+  <h1><span class="num">+500</span> juegos cooperativos de matemáticas para que <span class="hl">toda tu clase</span> participe</h1>
+  <p class="sub">Juegos listos para aplicar mañana, con paso a paso, materiales simples y una regla: el grupo gana junto.</p>
+  <!-- Troque pela imagem de mockup do produto quando tiver (caixa + fichas). Por enquanto mostra uma ficha real. -->
+  <div class="hero-img"><img src="ficha-fraccion-escondida.webp" width="1055" height="1491" alt="Ficha de ejemplo: La fracción escondida, juego matemático cooperativo"></div>
+  <a class="btn js-checkout" href="#oferta">Quiero los +500 juegos</a>
+  <p class="micro">Pago único · Acceso inmediato · Garantía de 7 días</p>
 </header>
 
-<!-- WHAT'S INSIDE -->
+<!-- O QUE VAI RECEBER -->
 <section>
-  <div class="wrap">
-    <div class="center"><span class="kicker">Qué vas a recibir</span></div>
-    <h2>Un juego para cada grado y cada tema del año</h2>
-    <p class="lead center">Organizados en 3 niveles, con un color para cada uno, para que encuentres rápido lo que necesitas.</p>
-    <div class="levels">
-      <div class="level lv1">
-        <div class="grade">Primaria · 1.º a 3.º</div>
-        <h3>Primeros pasos con los números</h3>
-        <ul><li>Conteo y valor posicional</li><li>Suma y resta</li><li>Cálculo mental</li><li>Figuras y patrones</li><li>Medidas, tiempo y dinero</li></ul>
-      </div>
-      <div class="level lv2">
-        <div class="grade">Primaria · 4.º a 6.º</div>
-        <h3>Operaciones sin miedo</h3>
-        <ul><li>Tablas y multiplicación</li><li>División</li><li>Fracciones y decimales</li><li>Geometría y perímetro</li><li>Problemas de la vida diaria</li></ul>
-      </div>
-      <div class="level lv3">
-        <div class="grade">Secundaria</div>
-        <h3>Álgebra que se entiende</h3>
-        <ul><li>Números enteros</li><li>Ecuaciones</li><li>Proporcionalidad y porcentajes</li><li>Teorema de Pitágoras</li><li>Estadística y probabilidad</li></ul>
-      </div>
+  <span class="eyebrow">Qué vas a recibir</span>
+  <h2 class="title">Un juego listo para cada grado y cada tema del año</h2>
+  <div class="stack">
+    <div class="item">
+      <div class="ico c-green"><b>1.º–3.º</b><small>Primaria</small></div>
+      <div><h3>Primeros pasos con los números</h3><p>Conteo, suma y resta, cálculo mental, figuras y medidas.</p></div>
     </div>
-    <div class="ficha-has">
-      <div>Objetivo claro</div><div>Duración y grupos</div><div>Materiales simples</div><div>Roles del equipo</div>
-      <div>Paso a paso</div><div>Versión más fácil</div><div>Versión más difícil</div><div>Respuestas para el profe</div>
+    <div class="item">
+      <div class="ico c-teal"><b>4.º–6.º</b><small>Primaria</small></div>
+      <div><h3>Operaciones sin miedo</h3><p>Tablas, división, fracciones, decimales y geometría.</p></div>
+    </div>
+    <div class="item">
+      <div class="ico c-purple"><b>1.º–5.º</b><small>Secundaria</small></div>
+      <div><h3>Álgebra que se entiende</h3><p>Enteros, ecuaciones, proporcionalidad, Pitágoras y estadística.</p></div>
+    </div>
+    <div class="item">
+      <div class="ico c-navy"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg><small>Ficha</small></div>
+      <div><h3>Paso a paso en cada juego</h3><p>Objetivo, materiales, roles del equipo, duración y cómo jugar, explicado en minutos.</p></div>
+    </div>
+    <div class="item">
+      <div class="ico c-navy"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V14M12 20V9M19 20V4"/></svg><small>Niveles</small></div>
+      <div><h3>Variaciones para cada grupo</h3><p>Una versión más fácil y otra más difícil, con las respuestas para el profe.</p></div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="center"><span class="kicker">Por qué funciona</span></div>
-    <h2>En un juego cooperativo, nadie se esconde</h2>
+<!-- POR QUE FUNCIONA -->
+<section>
+  <span class="eyebrow">Por qué funciona</span>
+  <h2 class="title">Tu clase deja de mirar y empieza a participar</h2>
+  <div class="stack">
     <div class="why">
-      <div><i>🧩</i><h3>Todos tienen una pieza</h3><p>Cada alumno tiene un rol o una parte del problema. Si uno no aporta, el grupo no avanza.</p></div>
-      <div><i>🗣️</i><h3>Aprenden explicando</h3><p>El que entendió le explica a su compañero. El que explica fija el contenido y el que escucha aprende en su idioma.</p></div>
-      <div><i>💛</i><h3>Sin miedo a equivocarse</h3><p>No compiten entre ellos. El error es del equipo y se corrige en equipo, y la confianza con los números crece.</p></div>
+      <div class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="#173a5e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5.5"/></svg></div>
+      <h3>Todos tienen una pieza</h3>
+      <p>Cada alumno tiene un rol o una parte del problema. Si uno no aporta, el equipo no avanza, así que nadie se esconde.</p>
+    </div>
+    <div class="why">
+      <div class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="#173a5e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+      <h3>Aprenden explicando</h3>
+      <p>El que entendió le explica a su compañero. Uno fija el contenido y el otro lo aprende con palabras de su edad.</p>
+    </div>
+    <div class="why">
+      <div class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="#173a5e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M10 2h4"/></svg></div>
+      <h3>Listo en 2 minutos</h3>
+      <p>Lees la ficha, juntas papel, lápiz o dados y empiezas. Nada de pasar el domingo planificando.</p>
     </div>
   </div>
 </section>
 
-<!-- BONUSES -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="center"><span class="kicker">Regalos incluidos</span></div>
-    <h2>Y además, 5 bonos para tu año escolar</h2>
-    <div class="bonus-list">
-      <div class="bonus"><div class="tag">Bono 1</div><h3>Kit Imprimible de Juego</h3><p>Tarjetas numéricas, dados recortables, tableros y fichas de roles. Todo lo que piden los juegos, listo para imprimir.</p></div>
-      <div class="bonus"><div class="tag">Bono 2</div><h3>Mapa Curricular por País</h3><p>Qué juego usar para cada tema del programa de México, Colombia, Perú, Argentina y Chile.</p></div>
-      <div class="bonus"><div class="tag">Bono 3</div><h3>Juegos de Repaso antes del Examen</h3><p>Dinámicas cortas para repasar todo el bimestre en una clase, con el grupo entero participando.</p></div>
-      <div class="bonus"><div class="tag">Bono 4</div><h3>Primera Semana de Clases</h3><p>Juegos para conocer al grupo, romper el hielo y descubrir el nivel de matemáticas de cada alumno.</p></div>
-      <div class="bonus"><div class="tag">Bono 5</div><h3>Diplomas de Equipo</h3><p>Diplomas y medallas imprimibles para celebrar los logros del grupo y motivar a toda la clase.</p></div>
+<!-- BÔNUS -->
+<section>
+  <span class="eyebrow">Bonos exclusivos</span>
+  <h2 class="title">Comprando hoy, te llevas 5 regalos</h2>
+  <p class="sub">Todo lo que necesitas para usar los juegos desde la primera semana.</p>
+  <div class="stack" style="gap:24px">
+    <div class="bonus"><span class="tag">BONO 1</span>
+      <div class="cover c-teal"><small>Bono 1</small><b>Kit Imprimible de Juego</b><i>1</i></div>
+      <div><h3>Kit Imprimible de Juego</h3><p>Tarjetas numéricas, dados recortables, tableros y tarjetas de roles. Todo lo que piden los juegos.</p><span class="free">HOY GRATIS</span></div>
+    </div>
+    <div class="bonus"><span class="tag">BONO 2</span>
+      <div class="cover c-purple"><small>Bono 2</small><b>Mapa Curricular por País</b><i>2</i></div>
+      <div><h3>Mapa Curricular por País</h3><p>Qué juego usar para cada tema del programa de México, Colombia, Perú, Argentina y Chile.</p><span class="free">HOY GRATIS</span></div>
+    </div>
+    <div class="bonus"><span class="tag">BONO 3</span>
+      <div class="cover c-green"><small>Bono 3</small><b>Repaso antes del Examen</b><i>3</i></div>
+      <div><h3>Juegos de Repaso antes del Examen</h3><p>Dinámicas cortas para repasar todo el bimestre en una clase, con el grupo entero participando.</p><span class="free">HOY GRATIS</span></div>
+    </div>
+    <div class="bonus"><span class="tag">BONO 4</span>
+      <div class="cover c-navy"><small>Bono 4</small><b>Primera Semana de Clases</b><i>4</i></div>
+      <div><h3>Primera Semana de Clases</h3><p>Juegos para conocer al grupo, romper el hielo y descubrir el nivel de matemáticas de cada alumno.</p><span class="free">HOY GRATIS</span></div>
+    </div>
+    <div class="bonus"><span class="tag">BONO 5</span>
+      <div class="cover c-teal"><small>Bono 5</small><b>Diplomas de Equipo</b><i>5</i></div>
+      <div><h3>Diplomas de Equipo</h3><p>Diplomas y medallas imprimibles para celebrar los logros del grupo y motivar a toda la clase.</p><span class="free">HOY GRATIS</span></div>
     </div>
   </div>
 </section>
 
-<!-- OFFER -->
-<section class="offer" id="oferta">
-  <div class="wrap">
-    <div class="center"><span class="kicker">Precio de lanzamiento</span></div>
-    <h2>Lleva todo hoy por un pago único</h2>
-    <div class="offer-box">
-      <div class="head">+500 Juegos Cooperativos de Matemáticas</div>
-      <ul>
-        <li>+500 juegos cooperativos, de 1.º de primaria a secundaria</li>
-        <li>Organizados por grado y por tema</li>
-        <li>Cada ficha con paso a paso, variaciones y respuestas</li>
-        <li>Acceso inmediato y de por vida</li>
-        <li class="gift">Kit Imprimible de Juego</li>
-        <li class="gift">Mapa Curricular por País</li>
-        <li class="gift">Juegos de Repaso antes del Examen</li>
-        <li class="gift">Primera Semana de Clases</li>
-        <li class="gift">Diplomas de Equipo</li>
-      </ul>
-      <div class="price">
-        <div class="val"><small>US$</small>9,90</div>
-        <div class="once">Pago único · sin mensualidades</div>
-        <a class="btn js-checkout" href="#oferta">¡Quiero acceso ahora! →</a>
-        <p class="fx">Precio en dólares. El total en tu moneda aparece antes de pagar.</p>
-        <div class="guar">🛡️ <span><strong>Garantía de 7 días.</strong> Si no te sirve, te devolvemos el 100% de tu dinero.</span></div>
-        <div class="pay"><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>OXXO</span><span>PSE</span></div>
-      </div>
+<!-- OFERTA -->
+<section id="oferta">
+  <span class="eyebrow">Oferta especial</span>
+  <h2 class="title">Lleva todo hoy por un pago único</h2>
+  <div class="offer-box">
+    <div class="head">Juegos Cooperativos de Matemáticas + 5 Bonos</div>
+    <ul>
+      <li>+500 juegos cooperativos de matemáticas</li>
+      <li>De 1.º de primaria a 5.º de secundaria</li>
+      <li>Paso a paso para aplicar en clase en minutos</li>
+      <li>Kit Imprimible de Juego <em>(gratis)</em></li>
+      <li>Mapa Curricular por País <em>(gratis)</em></li>
+      <li>Juegos de Repaso antes del Examen <em>(gratis)</em></li>
+      <li>Primera Semana de Clases <em>(gratis)</em></li>
+      <li>Diplomas de Equipo <em>(gratis)</em></li>
+      <li>Acceso inmediato y de por vida</li>
+    </ul>
+    <div class="price">
+      <p class="by">Todo por solo</p>
+      <p class="val"><small>US$</small>9,90</p>
+      <p class="once">Pago único · sin mensualidades</p>
+      <a class="btn js-checkout" href="#oferta">Sí, quiero mi acceso</a>
+      <p class="micro">🔒 Pago 100% seguro · ⚡ Acceso inmediato<br>Precio en dólares. El total en tu moneda aparece antes de pagar.</p>
+      <div class="guar"><div class="seal"><b>7</b><small>DÍAS</small></div><p><strong>Garantía de 7 días.</strong> Si el material no te sirve, te devolvemos el 100% de tu dinero.</p></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<!-- Coloque aqui apenas depoimentos REAIS (prints de WhatsApp/Instagram ou texto com autorização). Troque cada bloco .t-slot por <img src="depoimento1.jpg" alt="Testimonio de una docente"> -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="center"><span class="kicker">Lo que dicen los profes</span></div>
-    <h2>Docentes que ya lo usan en clase</h2>
-    <div class="testis">
-      <div class="t-slot">Espacio para testimonio real #1</div>
-      <div class="t-slot">Espacio para testimonio real #2</div>
-      <div class="t-slot">Espacio para testimonio real #3</div>
-    </div>
+<!-- DEPOIMENTOS -->
+<!-- Use apenas depoimentos REAIS. Substitua o texto entre colchetes e remova a classe "placeholder" de cada card. Se ainda não tiver, apague esta seção inteira antes de publicar. -->
+<section>
+  <span class="eyebrow">Lo que dicen los docentes</span>
+  <h2 class="title">Docentes que ya lo usan en clase</h2>
+  <div class="stack">
+    <div class="testi placeholder"><div class="stars">★★★★★</div><q>[Testimonio real de un docente]</q><div class="who"><span class="av">AA</span><div><b>[Nombre]</b><small>[Grado o materia · País]</small></div></div></div>
+    <div class="testi placeholder"><div class="stars">★★★★★</div><q>[Testimonio real de un docente]</q><div class="who"><span class="av">AA</span><div><b>[Nombre]</b><small>[Grado o materia · País]</small></div></div></div>
+    <div class="testi placeholder"><div class="stars">★★★★★</div><q>[Testimonio real de un docente]</q><div class="who"><span class="av">AA</span><div><b>[Nombre]</b><small>[Grado o materia · País]</small></div></div></div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq">
-      <details><summary>¿Cómo recibo el material?</summary><p>Apenas se confirma el pago, recibes en tu correo el acceso para descargar los PDF. Puedes abrirlos en el celular, la computadora o la tablet.</p></details>
-      <details><summary>¿Para qué grados sirve?</summary><p>Desde 1.º de primaria hasta secundaria. Cada juego indica el grado recomendado e incluye una versión más fácil y otra más difícil.</p></details>
-      <details><summary>¿Necesito materiales especiales?</summary><p>No. La mayoría de los juegos usa papel, lápiz, dados o tarjetas. Lo que haga falta recortar viene en el Kit Imprimible.</p></details>
-      <details><summary>¿Es un pago único?</summary><p>Sí. Pagas una sola vez y el material es tuyo para usar todos los años.</p></details>
-      <details><summary>¿Y si no me gusta?</summary><p>Tienes 7 días de garantía. Si no te convence, pides la devolución y te reembolsamos el 100%.</p></details>
-    </div>
+<section>
+  <span class="eyebrow">Dudas</span>
+  <h2 class="title">Preguntas frecuentes</h2>
+  <div class="stack" style="gap:10px">
+    <details><summary>¿Cómo recibo el material?</summary><p>Apenas se confirma el pago, recibes en tu correo el acceso para descargar los PDF. Puedes abrirlos en el celular, la computadora o la tablet.</p></details>
+    <details><summary>¿Para qué grados sirve?</summary><p>Desde 1.º de primaria hasta secundaria. Cada juego indica el grado recomendado e incluye una versión más fácil y otra más difícil.</p></details>
+    <details><summary>¿Necesito materiales especiales?</summary><p>No. La mayoría de los juegos usa papel, lápiz, dados o tarjetas. Lo que haga falta recortar viene en el Kit Imprimible.</p></details>
+    <details><summary>¿Es un pago único?</summary><p>Sí. Pagas una sola vez y el material es tuyo para usar todos los años.</p></details>
+    <details><summary>¿Y si no me gusta?</summary><p>Tienes 7 días de garantía. Si no te convence, pides la devolución y te reembolsamos el 100%.</p></details>
   </div>
 </section>
 
@@ -257,21 +274,20 @@
   <p>Este sitio no forma parte de Facebook ni de Meta Platforms, Inc. y no está respaldado por Meta de ninguna manera.</p>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn js-checkout" href="#oferta">¡Quiero mis juegos! · US$ 9,90</a></div>
+<div class="sticky" id="sticky"><a class="btn js-checkout" href="#oferta">Quiero los +500 juegos · US$ 9,90</a></div>
 
 <script>
-  // Cole aqui o link do checkout (Hotmart, Cakto, etc.). Enquanto estiver vazio, os botões rolam até a oferta.
+  // Cole aqui o link do checkout (Hotmart, Cakto etc.). Enquanto estiver vazio, os botões rolam até a oferta.
   const CHECKOUT_URL = "";
   if (CHECKOUT_URL) {
-    const qs = location.search.slice(1); // repassa UTMs do anúncio para o checkout
+    const qs = location.search.slice(1); // repassa as UTMs do anúncio para o checkout
     const url = qs ? CHECKOUT_URL + (CHECKOUT_URL.includes("?") ? "&" : "?") + qs : CHECKOUT_URL;
     document.querySelectorAll(".js-checkout").forEach(a => a.href = url);
   }
   const sticky = document.getElementById("sticky"), offer = document.getElementById("oferta");
   addEventListener("scroll", () => {
     const r = offer.getBoundingClientRect();
-    const inOffer = r.top < innerHeight && r.bottom > 0;
-    sticky.classList.toggle("show", scrollY > 600 && !inOffer);
+    sticky.classList.toggle("show", scrollY > 700 && !(r.top < innerHeight && r.bottom > 0));
   }, {passive:true});
 </script>
 </body>
