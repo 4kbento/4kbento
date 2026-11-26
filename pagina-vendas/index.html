@@ -43,14 +43,9 @@
   .hero h1 .num{color:var(--teal)}
   .hl{background:linear-gradient(transparent 56%,var(--yellow) 56%);padding:0 4px}
   .hero .sub{font-size:17px;margin-top:14px}
-  /* mockup em leque com 3 fichas reais */
-  .fan{position:relative;width:100%;aspect-ratio:1/1.02;max-width:100%;margin:26px 0 22px}
-  .fan img{position:absolute;width:54%;height:auto;border-radius:10px;border:1px solid var(--teal-line);box-shadow:0 14px 30px rgba(23,58,94,.22);background:#fff}
-  .fan .f1{left:3%;top:9%;transform:rotate(-9deg)}
-  .fan .f3{right:3%;top:9%;transform:rotate(9deg)}
-  .fan .f2{left:50%;top:0;width:64%;transform:translateX(-50%);z-index:2}
-  .fan .badge{position:absolute;z-index:3;right:2%;bottom:3%;width:96px;height:96px;border-radius:50%;background:var(--yellow);border:3px solid var(--navy);color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1;transform:rotate(-10deg);box-shadow:0 6px 0 var(--navy)}
-  .fan .badge b{font-size:28px} .fan .badge small{font-size:12px;margin-top:3px}
+  /* mockup do produto */
+  .mock{margin:22px -6px 24px}
+  .mock img{display:block;width:100%;height:auto}
 
   /* galeria deslizante de fichas */
   .gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:24px -16px 0;padding:6px 16px 16px;scrollbar-width:thin}
@@ -81,7 +76,7 @@
   /* bônus */
   .bonus{position:relative;border:2px dashed var(--teal);border-radius:var(--radius);padding:26px 14px 16px;display:flex;gap:14px;margin-top:10px}
   .bonus .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--navy);border:2px solid var(--navy);font-weight:800;font-size:12px;letter-spacing:.6px;padding:3px 12px;border-radius:99px;white-space:nowrap}
-  .cover{flex:0 0 78px;height:110px;position:relative;border-radius:8px;overflow:hidden;border:2px solid var(--navy);box-shadow:3px 4px 0 rgba(23,58,94,.18);background:#fff}
+  .cover{flex:0 0 96px;height:96px;align-self:center;position:relative;border-radius:12px;overflow:hidden;border:2px solid var(--teal-line);box-shadow:0 4px 10px rgba(23,58,94,.12);background:#fff}
   .cover img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
   .cover span{position:absolute;left:0;right:0;bottom:0;background:var(--teal);color:#fff;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;text-align:center;padding:3px 0}
   .bonus h3{font-size:16.5px;margin-bottom:5px}
@@ -142,12 +137,7 @@
   <span class="eyebrow">Material para docentes</span>
   <h1><span class="num">+500</span> juegos cooperativos de matemáticas para que <span class="hl">toda tu clase</span> participe</h1>
   <p class="sub">Juegos listos para aplicar mañana, con paso a paso, materiales simples y una regla: el grupo gana junto.</p>
-  <div class="fan" aria-label="Tres fichas de ejemplo del material">
-    <img class="f1" src="ficha-encuesta-colores.webp" width="720" height="1018" alt="Ficha Encuesta de Colores, 4.º a 6.º de primaria">
-    <img class="f3" src="ficha-termometro-cambios.webp" width="720" height="1018" alt="Ficha El Termómetro de Cambios, secundaria">
-    <img class="f2" src="ficha-numero-misterioso.webp" width="720" height="1018" alt="Ficha El número misterioso, 1.º a 3.º de primaria">
-    <div class="badge"><b>+500</b><small>juegos</small></div>
-  </div>
+  <div class="mock"><img src="mockup-produto.webp" width="627" height="591" alt="Colección +500 Juegos Cooperativos de Matemáticas: caja, fichas por tema y versión digital"></div>
   <a class="btn js-checkout" href="#oferta">Quiero los +500 juegos</a>
   <p class="micro">Pago único · Acceso inmediato · Garantía de 7 días</p>
 </header>
