@@ -1,0 +1,49 @@
+# Configuracao do minerador. Edite a vontade.
+
+# Palavras-chave em ingles, agrupadas por nicho.
+nichos:
+  saude e emagrecimento:
+    - weight loss
+    - blood sugar
+    - joint pain
+    - sleep
+  dinheiro e renda extra:
+    - make money online
+    - side hustle
+    - passive income
+    - work from home
+  educacao e cursos:
+    - typing course
+    - learn english
+    - online course
+    - memory training
+  relacionamento:
+    - dating advice
+    - get your ex back
+    - manifestation
+
+# Filtros
+pais: ALL              # ALL = mundo inteiro. Ou um codigo como US, GB, CA
+idioma: en             # so ofertas em ingles
+minimo_anuncios: 10    # ofertas abaixo disso nao entram no ranking
+top: 10                # quantas ofertas mostrar
+
+# Quantas paginas (anunciantes) aprofundar por varredura
+candidatos_por_varredura: 25
+rolagens_por_busca: 6  # quantas vezes rolar a lista de cada busca
+
+# Pesos da nota (somam 1). Prioridade: quantidade e tempo no ar.
+pesos:
+  quantidade: 0.45
+  tempo_no_ar: 0.40
+  variacoes: 0.15
+quantidade_maxima: 200   # a partir daqui a nota de quantidade e 100%
+dias_maximos: 90         # a partir daqui a nota de tempo no ar e 100%
+variacoes_maximas: 30
+
+# Navegador
+navegador:
+  invisivel: true        # false abre a janela (bom para depurar)
+  pausa_min: 3           # segundos entre acoes
+  pausa_max: 7
+  caminho_chromium: ""   # deixe vazio para usar o que o "playwright install" baixou
